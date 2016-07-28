@@ -21,3 +21,6 @@ UNIX:
 
 * PHP
 * [Symfony/Console](https://github.com/symfony/console)
+
+### Upcoming Features
+* Outputs .html file to display session on a timeline
