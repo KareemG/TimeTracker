@@ -45,5 +45,6 @@ class ClockInCommand extends Command {
 		array_push($this->timeSession->logs, new Log($this->timeSession->start, $msg, true));
 
 		$this->writeToConfig(json_encode($this->timeSession, JSON_PRETTY_PRINT));
+		$output->writeln("<info>Starting: " . $this->timeSession->start . "</info>");
 	}
 }

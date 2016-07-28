@@ -41,7 +41,8 @@ class LogCommand extends Command {
             fwrite($config, json_encode($this->timeSession, JSON_PRETTY_PRINT));
             fclose($config);
 		} else {
-            echo 'Must specify message.';
+            $output->writeln("<info>Must specify message.</info>");
         }
+        $output->writeln("<info>Logged: " . $time . "</info>");
 	}
 }

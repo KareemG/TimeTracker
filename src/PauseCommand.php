@@ -45,5 +45,7 @@ class PauseCommand extends Command {
         $config = fopen('config.json', 'w') or exit("Unable to write to config.");
         fwrite($config, json_encode($this->timeSession, JSON_PRETTY_PRINT));
         fclose($config);
+
+        $output->writeln("<info>Paused: " . $time . "</info>");
 	}
 }

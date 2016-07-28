@@ -68,6 +68,8 @@ class ClockOutCommand extends Command {
             }
         }
 
+        $output->writeln("<info>Finished: " . $end . "</info>");
+
         $start = str_replace(':', '-', $this->timeSession->start);
         $end = str_replace(':', '-', $end);
 
@@ -79,5 +81,6 @@ class ClockOutCommand extends Command {
         $this->cleared->folder = $this->timeSession->folder;
 
         $this->writeToConfig(json_encode($this->cleared, JSON_PRETTY_PRINT));
+		
 	}
 }
